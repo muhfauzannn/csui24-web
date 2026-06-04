@@ -21,6 +21,9 @@ model Menfess {
   from                       String
   message                    String
   isPosted                   Boolean    @default(false)
+  fingerprint                String?
+  tweetId                    String?    @unique
+  isBlocked                  Boolean    @default(false)
   resourceUserId             String?
   resourceUsername           String?
   resourceName               String?
@@ -31,7 +34,15 @@ model Menfess {
   reactions                  Reaction[]
   comments                   Comment[]
 
+  @@index([fingerprint])
   @@index([resourceUserId])
+}
+
+model BannedFingerprint {
+  id          String   @id @default(cuid())
+  fingerprint String   @unique
+  reason      String?
+  createdAt   DateTime @default(now())
 }
 
 model Reaction {
