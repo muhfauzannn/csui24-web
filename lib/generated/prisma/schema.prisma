@@ -16,14 +16,22 @@ datasource db {
 }
 
 model Menfess {
-  id        String     @id @default(uuid())
-  to        String
-  from      String
-  message   String
-  isPosted  Boolean    @default(false)
-  createdAt DateTime   @default(now())
-  reactions Reaction[]
-  comments  Comment[]
+  id                         String     @id @default(uuid())
+  to                         String
+  from                       String
+  message                    String
+  isPosted                   Boolean    @default(false)
+  resourceUserId             String?
+  resourceUsername           String?
+  resourceName               String?
+  resourceEmail              String?
+  resourceNpm                String?
+  resourceOrganizationalCode String?
+  createdAt                  DateTime   @default(now())
+  reactions                  Reaction[]
+  comments                   Comment[]
+
+  @@index([resourceUserId])
 }
 
 model Reaction {

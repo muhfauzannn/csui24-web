@@ -241,8 +241,8 @@ export namespace Prisma {
   export import Exact = $Public.Exact
 
   /**
-   * Prisma Client JS version: 6.10.1
-   * Query Engine version: 9b628578b3b7cae625e8c927178f15a170e74a9c
+   * Prisma Client JS version: 6.8.2
+   * Query Engine version: 2060c79ba17c6bb9f5823312b6f6b7f4a845738e
    */
   export type PrismaVersion = {
     client: string
@@ -1106,6 +1106,12 @@ export namespace Prisma {
     from: string | null
     message: string | null
     isPosted: boolean | null
+    resourceUserId: string | null
+    resourceUsername: string | null
+    resourceName: string | null
+    resourceEmail: string | null
+    resourceNpm: string | null
+    resourceOrganizationalCode: string | null
     createdAt: Date | null
   }
 
@@ -1115,6 +1121,12 @@ export namespace Prisma {
     from: string | null
     message: string | null
     isPosted: boolean | null
+    resourceUserId: string | null
+    resourceUsername: string | null
+    resourceName: string | null
+    resourceEmail: string | null
+    resourceNpm: string | null
+    resourceOrganizationalCode: string | null
     createdAt: Date | null
   }
 
@@ -1124,6 +1136,12 @@ export namespace Prisma {
     from: number
     message: number
     isPosted: number
+    resourceUserId: number
+    resourceUsername: number
+    resourceName: number
+    resourceEmail: number
+    resourceNpm: number
+    resourceOrganizationalCode: number
     createdAt: number
     _all: number
   }
@@ -1135,6 +1153,12 @@ export namespace Prisma {
     from?: true
     message?: true
     isPosted?: true
+    resourceUserId?: true
+    resourceUsername?: true
+    resourceName?: true
+    resourceEmail?: true
+    resourceNpm?: true
+    resourceOrganizationalCode?: true
     createdAt?: true
   }
 
@@ -1144,6 +1168,12 @@ export namespace Prisma {
     from?: true
     message?: true
     isPosted?: true
+    resourceUserId?: true
+    resourceUsername?: true
+    resourceName?: true
+    resourceEmail?: true
+    resourceNpm?: true
+    resourceOrganizationalCode?: true
     createdAt?: true
   }
 
@@ -1153,6 +1183,12 @@ export namespace Prisma {
     from?: true
     message?: true
     isPosted?: true
+    resourceUserId?: true
+    resourceUsername?: true
+    resourceName?: true
+    resourceEmail?: true
+    resourceNpm?: true
+    resourceOrganizationalCode?: true
     createdAt?: true
     _all?: true
   }
@@ -1235,6 +1271,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted: boolean
+    resourceUserId: string | null
+    resourceUsername: string | null
+    resourceName: string | null
+    resourceEmail: string | null
+    resourceNpm: string | null
+    resourceOrganizationalCode: string | null
     createdAt: Date
     _count: MenfessCountAggregateOutputType | null
     _min: MenfessMinAggregateOutputType | null
@@ -1261,6 +1303,12 @@ export namespace Prisma {
     from?: boolean
     message?: boolean
     isPosted?: boolean
+    resourceUserId?: boolean
+    resourceUsername?: boolean
+    resourceName?: boolean
+    resourceEmail?: boolean
+    resourceNpm?: boolean
+    resourceOrganizationalCode?: boolean
     createdAt?: boolean
     reactions?: boolean | Menfess$reactionsArgs<ExtArgs>
     comments?: boolean | Menfess$commentsArgs<ExtArgs>
@@ -1273,6 +1321,12 @@ export namespace Prisma {
     from?: boolean
     message?: boolean
     isPosted?: boolean
+    resourceUserId?: boolean
+    resourceUsername?: boolean
+    resourceName?: boolean
+    resourceEmail?: boolean
+    resourceNpm?: boolean
+    resourceOrganizationalCode?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["menfess"]>
 
@@ -1282,6 +1336,12 @@ export namespace Prisma {
     from?: boolean
     message?: boolean
     isPosted?: boolean
+    resourceUserId?: boolean
+    resourceUsername?: boolean
+    resourceName?: boolean
+    resourceEmail?: boolean
+    resourceNpm?: boolean
+    resourceOrganizationalCode?: boolean
     createdAt?: boolean
   }, ExtArgs["result"]["menfess"]>
 
@@ -1291,10 +1351,16 @@ export namespace Prisma {
     from?: boolean
     message?: boolean
     isPosted?: boolean
+    resourceUserId?: boolean
+    resourceUsername?: boolean
+    resourceName?: boolean
+    resourceEmail?: boolean
+    resourceNpm?: boolean
+    resourceOrganizationalCode?: boolean
     createdAt?: boolean
   }
 
-  export type MenfessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "to" | "from" | "message" | "isPosted" | "createdAt", ExtArgs["result"]["menfess"]>
+  export type MenfessOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "to" | "from" | "message" | "isPosted" | "resourceUserId" | "resourceUsername" | "resourceName" | "resourceEmail" | "resourceNpm" | "resourceOrganizationalCode" | "createdAt", ExtArgs["result"]["menfess"]>
   export type MenfessInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     reactions?: boolean | Menfess$reactionsArgs<ExtArgs>
     comments?: boolean | Menfess$commentsArgs<ExtArgs>
@@ -1315,6 +1381,12 @@ export namespace Prisma {
       from: string
       message: string
       isPosted: boolean
+      resourceUserId: string | null
+      resourceUsername: string | null
+      resourceName: string | null
+      resourceEmail: string | null
+      resourceNpm: string | null
+      resourceOrganizationalCode: string | null
       createdAt: Date
     }, ExtArgs["result"]["menfess"]>
     composites: {}
@@ -1746,6 +1818,12 @@ export namespace Prisma {
     readonly from: FieldRef<"Menfess", 'String'>
     readonly message: FieldRef<"Menfess", 'String'>
     readonly isPosted: FieldRef<"Menfess", 'Boolean'>
+    readonly resourceUserId: FieldRef<"Menfess", 'String'>
+    readonly resourceUsername: FieldRef<"Menfess", 'String'>
+    readonly resourceName: FieldRef<"Menfess", 'String'>
+    readonly resourceEmail: FieldRef<"Menfess", 'String'>
+    readonly resourceNpm: FieldRef<"Menfess", 'String'>
+    readonly resourceOrganizationalCode: FieldRef<"Menfess", 'String'>
     readonly createdAt: FieldRef<"Menfess", 'DateTime'>
   }
     
@@ -4358,6 +4436,12 @@ export namespace Prisma {
     from: 'from',
     message: 'message',
     isPosted: 'isPosted',
+    resourceUserId: 'resourceUserId',
+    resourceUsername: 'resourceUsername',
+    resourceName: 'resourceName',
+    resourceEmail: 'resourceEmail',
+    resourceNpm: 'resourceNpm',
+    resourceOrganizationalCode: 'resourceOrganizationalCode',
     createdAt: 'createdAt'
   };
 
@@ -4399,6 +4483,14 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -4481,6 +4573,12 @@ export namespace Prisma {
     from?: StringFilter<"Menfess"> | string
     message?: StringFilter<"Menfess"> | string
     isPosted?: BoolFilter<"Menfess"> | boolean
+    resourceUserId?: StringNullableFilter<"Menfess"> | string | null
+    resourceUsername?: StringNullableFilter<"Menfess"> | string | null
+    resourceName?: StringNullableFilter<"Menfess"> | string | null
+    resourceEmail?: StringNullableFilter<"Menfess"> | string | null
+    resourceNpm?: StringNullableFilter<"Menfess"> | string | null
+    resourceOrganizationalCode?: StringNullableFilter<"Menfess"> | string | null
     createdAt?: DateTimeFilter<"Menfess"> | Date | string
     reactions?: ReactionListRelationFilter
     comments?: CommentListRelationFilter
@@ -4492,6 +4590,12 @@ export namespace Prisma {
     from?: SortOrder
     message?: SortOrder
     isPosted?: SortOrder
+    resourceUserId?: SortOrderInput | SortOrder
+    resourceUsername?: SortOrderInput | SortOrder
+    resourceName?: SortOrderInput | SortOrder
+    resourceEmail?: SortOrderInput | SortOrder
+    resourceNpm?: SortOrderInput | SortOrder
+    resourceOrganizationalCode?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     reactions?: ReactionOrderByRelationAggregateInput
     comments?: CommentOrderByRelationAggregateInput
@@ -4506,6 +4610,12 @@ export namespace Prisma {
     from?: StringFilter<"Menfess"> | string
     message?: StringFilter<"Menfess"> | string
     isPosted?: BoolFilter<"Menfess"> | boolean
+    resourceUserId?: StringNullableFilter<"Menfess"> | string | null
+    resourceUsername?: StringNullableFilter<"Menfess"> | string | null
+    resourceName?: StringNullableFilter<"Menfess"> | string | null
+    resourceEmail?: StringNullableFilter<"Menfess"> | string | null
+    resourceNpm?: StringNullableFilter<"Menfess"> | string | null
+    resourceOrganizationalCode?: StringNullableFilter<"Menfess"> | string | null
     createdAt?: DateTimeFilter<"Menfess"> | Date | string
     reactions?: ReactionListRelationFilter
     comments?: CommentListRelationFilter
@@ -4517,6 +4627,12 @@ export namespace Prisma {
     from?: SortOrder
     message?: SortOrder
     isPosted?: SortOrder
+    resourceUserId?: SortOrderInput | SortOrder
+    resourceUsername?: SortOrderInput | SortOrder
+    resourceName?: SortOrderInput | SortOrder
+    resourceEmail?: SortOrderInput | SortOrder
+    resourceNpm?: SortOrderInput | SortOrder
+    resourceOrganizationalCode?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     _count?: MenfessCountOrderByAggregateInput
     _max?: MenfessMaxOrderByAggregateInput
@@ -4532,6 +4648,12 @@ export namespace Prisma {
     from?: StringWithAggregatesFilter<"Menfess"> | string
     message?: StringWithAggregatesFilter<"Menfess"> | string
     isPosted?: BoolWithAggregatesFilter<"Menfess"> | boolean
+    resourceUserId?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
+    resourceUsername?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
+    resourceName?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
+    resourceEmail?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
+    resourceNpm?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
+    resourceOrganizationalCode?: StringNullableWithAggregatesFilter<"Menfess"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Menfess"> | Date | string
   }
 
@@ -4649,6 +4771,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     reactions?: ReactionCreateNestedManyWithoutMenfessInput
     comments?: CommentCreateNestedManyWithoutMenfessInput
@@ -4660,6 +4788,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     reactions?: ReactionUncheckedCreateNestedManyWithoutMenfessInput
     comments?: CommentUncheckedCreateNestedManyWithoutMenfessInput
@@ -4671,6 +4805,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     reactions?: ReactionUpdateManyWithoutMenfessNestedInput
     comments?: CommentUpdateManyWithoutMenfessNestedInput
@@ -4682,6 +4822,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     reactions?: ReactionUncheckedUpdateManyWithoutMenfessNestedInput
     comments?: CommentUncheckedUpdateManyWithoutMenfessNestedInput
@@ -4693,6 +4839,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
   }
 
@@ -4702,6 +4854,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4711,6 +4869,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
@@ -4837,6 +5001,21 @@ export namespace Prisma {
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -4860,6 +5039,11 @@ export namespace Prisma {
     none?: CommentWhereInput
   }
 
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
+  }
+
   export type ReactionOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
@@ -4874,6 +5058,12 @@ export namespace Prisma {
     from?: SortOrder
     message?: SortOrder
     isPosted?: SortOrder
+    resourceUserId?: SortOrder
+    resourceUsername?: SortOrder
+    resourceName?: SortOrder
+    resourceEmail?: SortOrder
+    resourceNpm?: SortOrder
+    resourceOrganizationalCode?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -4883,6 +5073,12 @@ export namespace Prisma {
     from?: SortOrder
     message?: SortOrder
     isPosted?: SortOrder
+    resourceUserId?: SortOrder
+    resourceUsername?: SortOrder
+    resourceName?: SortOrder
+    resourceEmail?: SortOrder
+    resourceNpm?: SortOrder
+    resourceOrganizationalCode?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -4892,6 +5088,12 @@ export namespace Prisma {
     from?: SortOrder
     message?: SortOrder
     isPosted?: SortOrder
+    resourceUserId?: SortOrder
+    resourceUsername?: SortOrder
+    resourceName?: SortOrder
+    resourceEmail?: SortOrder
+    resourceNpm?: SortOrder
+    resourceOrganizationalCode?: SortOrder
     createdAt?: SortOrder
   }
 
@@ -4919,6 +5121,24 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    mode?: QueryMode
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -5061,6 +5281,10 @@ export namespace Prisma {
     set?: boolean
   }
 
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
+  }
+
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
@@ -5176,6 +5400,20 @@ export namespace Prisma {
     not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
+  }
+
   export type NestedDateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel>
@@ -5221,6 +5459,34 @@ export namespace Prisma {
     _count?: NestedIntFilter<$PrismaModel>
     _min?: NestedBoolFilter<$PrismaModel>
     _max?: NestedBoolFilter<$PrismaModel>
+  }
+
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
+    lt?: string | StringFieldRefInput<$PrismaModel>
+    lte?: string | StringFieldRefInput<$PrismaModel>
+    gt?: string | StringFieldRefInput<$PrismaModel>
+    gte?: string | StringFieldRefInput<$PrismaModel>
+    contains?: string | StringFieldRefInput<$PrismaModel>
+    startsWith?: string | StringFieldRefInput<$PrismaModel>
+    endsWith?: string | StringFieldRefInput<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -5369,6 +5635,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     comments?: CommentCreateNestedManyWithoutMenfessInput
   }
@@ -5379,6 +5651,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     comments?: CommentUncheckedCreateNestedManyWithoutMenfessInput
   }
@@ -5405,6 +5683,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     comments?: CommentUpdateManyWithoutMenfessNestedInput
   }
@@ -5415,6 +5699,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     comments?: CommentUncheckedUpdateManyWithoutMenfessNestedInput
   }
@@ -5425,6 +5715,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     reactions?: ReactionCreateNestedManyWithoutMenfessInput
   }
@@ -5435,6 +5731,12 @@ export namespace Prisma {
     from: string
     message: string
     isPosted?: boolean
+    resourceUserId?: string | null
+    resourceUsername?: string | null
+    resourceName?: string | null
+    resourceEmail?: string | null
+    resourceNpm?: string | null
+    resourceOrganizationalCode?: string | null
     createdAt?: Date | string
     reactions?: ReactionUncheckedCreateNestedManyWithoutMenfessInput
   }
@@ -5461,6 +5763,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     reactions?: ReactionUpdateManyWithoutMenfessNestedInput
   }
@@ -5471,6 +5779,12 @@ export namespace Prisma {
     from?: StringFieldUpdateOperationsInput | string
     message?: StringFieldUpdateOperationsInput | string
     isPosted?: BoolFieldUpdateOperationsInput | boolean
+    resourceUserId?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceUsername?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceName?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceEmail?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceNpm?: NullableStringFieldUpdateOperationsInput | string | null
+    resourceOrganizationalCode?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     reactions?: ReactionUncheckedUpdateManyWithoutMenfessNestedInput
   }

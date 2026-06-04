@@ -4,6 +4,7 @@ import { TwitterApi } from "twitter-api-v2";
 import { briefFamsData } from "@/modules/fams-data";
 import { globalRateLimit } from "@/lib/rateLimiter";
 import { detectHate } from "@/lib/detectHate";
+import { getResourceSessionUser } from "@/lib/resourceSession";
 
 const prisma = new PrismaClient();
 
@@ -155,11 +156,18 @@ export default async function handler(
     }
 
     try {
+      const resourceUser = await getResourceSessionUser(req);
       const newMenfess = await prisma.menfess.create({
         data: {
           to,
           from,
           message,
+          resourceUserId: resourceUser?.id,
+          resourceUsername: resourceUser?.username,
+          resourceName: resourceUser?.name,
+          resourceEmail: resourceUser?.email,
+          resourceNpm: resourceUser?.npm,
+          resourceOrganizationalCode: resourceUser?.organizationalCode,
         },
       });
 
